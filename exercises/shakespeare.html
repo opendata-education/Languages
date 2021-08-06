@@ -267,9 +267,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package gutenberg to /home/runner/nltk_data...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data]   Unzipping corpora/gutenberg.zip.
+[nltk_data]   Unzipping corpora/gutenberg.zip.
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;austen-emma.txt&#39;,
@@ -622,6 +620,7 @@ Sentences: [[&#39;[&#39;, &#39;The&#39;, &#39;Tragedie&#39;, &#39;of&#39;, &#39;
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
 
 <span class="n">stop_words</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">stop_words</span><span class="p">)</span>
@@ -629,101 +628,11 @@ Sentences: [[&#39;[&#39;, &#39;The&#39;, &#39;Tragedie&#39;, &#39;of&#39;, &#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">LookupError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/nltk/corpus/util.py</span> in <span class="ni">__load</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span>                 <span class="k">try</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">83</span>                     <span class="n">root</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">subdir</span><span class="p">,</span> <span class="n">zip_name</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span>                 <span class="k">except</span> <span class="ne">LookupError</span><span class="p">:</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/nltk/data.py</span> in <span class="ni">find</span><span class="nt">(resource_name, paths)</span>
-<span class="g g-Whitespace">    </span><span class="mi">582</span>     <span class="n">resource_not_found</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">sep</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">sep</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">583</span>     <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span><span class="n">resource_not_found</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span> 
-
-<span class="ne">LookupError</span>: 
-<span class="o">**********************************************************************</span>
-  <span class="n">Resource</span> <span class="n">stopwords</span> <span class="ow">not</span> <span class="n">found</span><span class="o">.</span>
-  <span class="n">Please</span> <span class="n">use</span> <span class="n">the</span> <span class="n">NLTK</span> <span class="n">Downloader</span> <span class="n">to</span> <span class="n">obtain</span> <span class="n">the</span> <span class="n">resource</span><span class="p">:</span>
-
-  <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">nltk</span>
-  <span class="o">&gt;&gt;&gt;</span> <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
-  
-  <span class="n">For</span> <span class="n">more</span> <span class="n">information</span> <span class="n">see</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">nltk</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">html</span>
-
-  <span class="n">Attempted</span> <span class="n">to</span> <span class="n">load</span> <span class="n">corpora</span><span class="o">/</span><span class="n">stopwords</span><span class="o">.</span><span class="n">zip</span><span class="o">/</span><span class="n">stopwords</span><span class="o">/</span>
-
-  <span class="n">Searched</span> <span class="ow">in</span><span class="p">:</span>
-    <span class="o">-</span> <span class="s1">&#39;/home/runner/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/opt/hostedtoolcache/Python/3.8.11/x64/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/opt/hostedtoolcache/Python/3.8.11/x64/share/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/opt/hostedtoolcache/Python/3.8.11/x64/lib/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/usr/share/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/usr/local/share/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/usr/lib/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/usr/local/lib/nltk_data&#39;</span>
-<span class="o">**********************************************************************</span>
-
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">LookupError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1731</span><span class="o">/</span><span class="mf">186987975.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">stop_words</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">stop_words</span><span class="p">)</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/nltk/corpus/util.py</span> in <span class="ni">__getattr__</span><span class="nt">(self, attr)</span>
-<span class="g g-Whitespace">    </span><span class="mi">118</span>             <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s2">&quot;LazyCorpusLoader object has no attribute &#39;__bases__&#39;&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">119</span> 
-<span class="ne">--&gt; </span><span class="mi">120</span>         <span class="bp">self</span><span class="o">.</span><span class="n">__load</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">121</span>         <span class="c1"># This looks circular, but its not, since __load() changes our</span>
-<span class="g g-Whitespace">    </span><span class="mi">122</span>         <span class="c1"># __class__ to something new:</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/nltk/corpus/util.py</span> in <span class="ni">__load</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">83</span>                     <span class="n">root</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">subdir</span><span class="p">,</span> <span class="n">zip_name</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">84</span>                 <span class="k">except</span> <span class="ne">LookupError</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">85</span>                     <span class="k">raise</span> <span class="n">e</span>
-<span class="g g-Whitespace">     </span><span class="mi">86</span> 
-<span class="g g-Whitespace">     </span><span class="mi">87</span>         <span class="c1"># Load the corpus.</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/nltk/corpus/util.py</span> in <span class="ni">__load</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">     </span><span class="mi">78</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">79</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">80</span>                 <span class="n">root</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">subdir</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__name</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">81</span>             <span class="k">except</span> <span class="ne">LookupError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">82</span>                 <span class="k">try</span><span class="p">:</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/nltk/data.py</span> in <span class="ni">find</span><span class="nt">(resource_name, paths)</span>
-<span class="g g-Whitespace">    </span><span class="mi">581</span>     <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="mi">70</span>
-<span class="g g-Whitespace">    </span><span class="mi">582</span>     <span class="n">resource_not_found</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">sep</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">sep</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">583</span>     <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span><span class="n">resource_not_found</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span> 
-<span class="g g-Whitespace">    </span><span class="mi">585</span> 
-
-<span class="ne">LookupError</span>: 
-<span class="o">**********************************************************************</span>
-  <span class="n">Resource</span> <span class="n">stopwords</span> <span class="ow">not</span> <span class="n">found</span><span class="o">.</span>
-  <span class="n">Please</span> <span class="n">use</span> <span class="n">the</span> <span class="n">NLTK</span> <span class="n">Downloader</span> <span class="n">to</span> <span class="n">obtain</span> <span class="n">the</span> <span class="n">resource</span><span class="p">:</span>
-
-  <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">nltk</span>
-  <span class="o">&gt;&gt;&gt;</span> <span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
-  
-  <span class="n">For</span> <span class="n">more</span> <span class="n">information</span> <span class="n">see</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">nltk</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">html</span>
-
-  <span class="n">Attempted</span> <span class="n">to</span> <span class="n">load</span> <span class="n">corpora</span><span class="o">/</span><span class="n">stopwords</span>
-
-  <span class="n">Searched</span> <span class="ow">in</span><span class="p">:</span>
-    <span class="o">-</span> <span class="s1">&#39;/home/runner/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/opt/hostedtoolcache/Python/3.8.11/x64/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/opt/hostedtoolcache/Python/3.8.11/x64/share/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/opt/hostedtoolcache/Python/3.8.11/x64/lib/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/usr/share/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/usr/local/share/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/usr/lib/nltk_data&#39;</span>
-    <span class="o">-</span> <span class="s1">&#39;/usr/local/lib/nltk_data&#39;</span>
-<span class="o">**********************************************************************</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;i&#39;, &#39;me&#39;, &#39;my&#39;, &#39;myself&#39;, &#39;we&#39;, &#39;our&#39;, &#39;ours&#39;, &#39;ourselves&#39;, &#39;you&#39;, &quot;you&#39;re&quot;, &quot;you&#39;ve&quot;, &quot;you&#39;ll&quot;, &quot;you&#39;d&quot;, &#39;your&#39;, &#39;yours&#39;, &#39;yourself&#39;, &#39;yourselves&#39;, &#39;he&#39;, &#39;him&#39;, &#39;his&#39;, &#39;himself&#39;, &#39;she&#39;, &quot;she&#39;s&quot;, &#39;her&#39;, &#39;hers&#39;, &#39;herself&#39;, &#39;it&#39;, &quot;it&#39;s&quot;, &#39;its&#39;, &#39;itself&#39;, &#39;they&#39;, &#39;them&#39;, &#39;their&#39;, &#39;theirs&#39;, &#39;themselves&#39;, &#39;what&#39;, &#39;which&#39;, &#39;who&#39;, &#39;whom&#39;, &#39;this&#39;, &#39;that&#39;, &quot;that&#39;ll&quot;, &#39;these&#39;, &#39;those&#39;, &#39;am&#39;, &#39;is&#39;, &#39;are&#39;, &#39;was&#39;, &#39;were&#39;, &#39;be&#39;, &#39;been&#39;, &#39;being&#39;, &#39;have&#39;, &#39;has&#39;, &#39;had&#39;, &#39;having&#39;, &#39;do&#39;, &#39;does&#39;, &#39;did&#39;, &#39;doing&#39;, &#39;a&#39;, &#39;an&#39;, &#39;the&#39;, &#39;and&#39;, &#39;but&#39;, &#39;if&#39;, &#39;or&#39;, &#39;because&#39;, &#39;as&#39;, &#39;until&#39;, &#39;while&#39;, &#39;of&#39;, &#39;at&#39;, &#39;by&#39;, &#39;for&#39;, &#39;with&#39;, &#39;about&#39;, &#39;against&#39;, &#39;between&#39;, &#39;into&#39;, &#39;through&#39;, &#39;during&#39;, &#39;before&#39;, &#39;after&#39;, &#39;above&#39;, &#39;below&#39;, &#39;to&#39;, &#39;from&#39;, &#39;up&#39;, &#39;down&#39;, &#39;in&#39;, &#39;out&#39;, &#39;on&#39;, &#39;off&#39;, &#39;over&#39;, &#39;under&#39;, &#39;again&#39;, &#39;further&#39;, &#39;then&#39;, &#39;once&#39;, &#39;here&#39;, &#39;there&#39;, &#39;when&#39;, &#39;where&#39;, &#39;why&#39;, &#39;how&#39;, &#39;all&#39;, &#39;any&#39;, &#39;both&#39;, &#39;each&#39;, &#39;few&#39;, &#39;more&#39;, &#39;most&#39;, &#39;other&#39;, &#39;some&#39;, &#39;such&#39;, &#39;no&#39;, &#39;nor&#39;, &#39;not&#39;, &#39;only&#39;, &#39;own&#39;, &#39;same&#39;, &#39;so&#39;, &#39;than&#39;, &#39;too&#39;, &#39;very&#39;, &#39;s&#39;, &#39;t&#39;, &#39;can&#39;, &#39;will&#39;, &#39;just&#39;, &#39;don&#39;, &quot;don&#39;t&quot;, &#39;should&#39;, &quot;should&#39;ve&quot;, &#39;now&#39;, &#39;d&#39;, &#39;ll&#39;, &#39;m&#39;, &#39;o&#39;, &#39;re&#39;, &#39;ve&#39;, &#39;y&#39;, &#39;ain&#39;, &#39;aren&#39;, &quot;aren&#39;t&quot;, &#39;couldn&#39;, &quot;couldn&#39;t&quot;, &#39;didn&#39;, &quot;didn&#39;t&quot;, &#39;doesn&#39;, &quot;doesn&#39;t&quot;, &#39;hadn&#39;, &quot;hadn&#39;t&quot;, &#39;hasn&#39;, &quot;hasn&#39;t&quot;, &#39;haven&#39;, &quot;haven&#39;t&quot;, &#39;isn&#39;, &quot;isn&#39;t&quot;, &#39;ma&#39;, &#39;mightn&#39;, &quot;mightn&#39;t&quot;, &#39;mustn&#39;, &quot;mustn&#39;t&quot;, &#39;needn&#39;, &quot;needn&#39;t&quot;, &#39;shan&#39;, &quot;shan&#39;t&quot;, &#39;shouldn&#39;, &quot;shouldn&#39;t&quot;, &#39;wasn&#39;, &quot;wasn&#39;t&quot;, &#39;weren&#39;, &quot;weren&#39;t&quot;, &#39;won&#39;, &quot;won&#39;t&quot;, &#39;wouldn&#39;, &quot;wouldn&#39;t&quot;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /home/runner/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
 </pre></div>
 </div>
 </div>
@@ -750,16 +659,7 @@ Sentences: [[&#39;[&#39;, &#39;The&#39;, &#39;Tragedie&#39;, &#39;of&#39;, &#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1731</span><span class="o">/</span><span class="mf">344318970.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="c1"># Only perform the following code if the word is not found in stop_words list.</span>
-<span class="ne">----&gt; </span><span class="mi">8</span>     <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="g g-Whitespace">     </span><span class="mi">10</span>         <span class="c1"># Add the word to the sample_nostopwords-list.</span>
-
-<span class="ne">NameError</span>: name &#39;stop_words&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4694
 </pre></div>
 </div>
 </div>
@@ -829,10 +729,29 @@ Sentences: [[&#39;[&#39;, &#39;The&#39;, &#39;Tragedie&#39;, &#39;of&#39;, &#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;FreqDist with 0 samples and 0 outcomes&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;FreqDist with 4423 samples and 15880 outcomes&gt;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;ham&#39;, 337),
+ (&#39;lord&#39;, 217),
+ (&#39;king&#39;, 180),
+ (&#39;haue&#39;, 175),
+ (&#39;come&#39;, 127),
+ (&#39;hamlet&#39;, 107),
+ (&#39;let&#39;, 107),
+ (&#39;shall&#39;, 107),
+ (&#39;thou&#39;, 105),
+ (&#39;good&#39;, 98),
+ (&#39;hor&#39;, 95),
+ (&#39;thy&#39;, 90),
+ (&#39;enter&#39;, 85),
+ (&#39;oh&#39;, 81),
+ (&#39;like&#39;, 80),
+ (&#39;well&#39;, 70),
+ (&#39;make&#39;, 70),
+ (&#39;father&#39;, 70),
+ (&#39;ti&#39;, 69),
+ (&#39;know&#39;, 69)]
 </pre></div>
 </div>
 </div>
