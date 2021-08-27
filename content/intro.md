@@ -1,7 +1,7 @@
 Welcome to the world of open data
 =================================
 
-This site contains open data -based teaching material related to languages.
+This site contains open data -based teaching material related to text analysis.
 Exercises can be found from the table of contents on the left side of the page.
 When you open an exercise, it is in display-mode by default.
 If you wish to modify and use the exercise notebook yourself, follow the instructions below.
