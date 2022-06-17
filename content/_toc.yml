@@ -1,8 +1,10 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
-- file: intro
-- part: Exercises
-  chapters:
+format: jb-book
+root: intro
+chapters:
+- file: exercises/title
+  sections:
   - file: exercises/shakespeare
   - file: exercises/wordcloud
   - file: exercises/text_classification
